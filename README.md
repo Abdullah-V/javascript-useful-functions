@@ -1,5 +1,5 @@
 # Javascript Useful Functions
-### Useful javascript functions  where not included in the javascript standard
+### Useful javascript functions  where not included in the javascript standard.
 
 
 # Usage
@@ -99,6 +99,18 @@ var a = ["one","two","three","four","five"]
 console.log(choice(a))
 
 // example output: five
+```
+## _sortChars(array,ascending)_
+#### Sort the strings with my algorithm.
+#### NOTE: Chars must be array format
+#### TIP: Use spread operator([...array]) for array format.
+### Example:
+```js
+console.log(sortChars(["v","z","a",2,"w","t","r","R",3],false))
+console.log(sortChars(["v","z","a",2,"w","t","r","R",3],true))
+
+// output 1: ["z", "w", "v", "t", "r", "R", "a", 2, 3]
+// output 2: ["a", "R", "r", "t", "v", "w", "z", 2, 3]
 ```
 
 

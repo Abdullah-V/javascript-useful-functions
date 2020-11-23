@@ -7,7 +7,8 @@ import {
     genCh,
     range,
     choice,
-    zip
+    zip,
+    sortChars
 } from "../functions";
 
 var a = ["one","two","three","four","five"]
@@ -23,6 +24,10 @@ console.log(zip(a,b))
 console.log(shuffle(a))
 
 console.log(range(5,11))
+
+console.log(sortChars(["v","z","a",2,"w","t","r","R",3],false))
+
+console.log(sortChars(["v","z","a",2,"w","t","r","R",3],true))
 
 var o = {
     "name":"abdullah",

@@ -52,6 +52,23 @@ function choice(arr){
     return arr[Math.floor(Math.random() * arr.length)]
 }
 
+function sortChars(arr,asc){
+    var keys = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
+    keys = asc ? [...keys] : [...keys].reverse()
+    var result = []
+    var deneme = keys.reverse().forEach((item,index) => {
+        arr.forEach(item2 => {
+            if(keys.includes(item2) && item === item2){
+                result.unshift(item2)
+            }
+            if(!keys.includes(item2) && index === keys.length - 1){
+                result.push(item2)
+            }
+        })
+    })
+    return result
+}
+
 export {
     findKeyByValue,
     sleep,
@@ -61,6 +78,7 @@ export {
     genCh,
     range,
     choice,
-    zip
+    zip,
+    sortChars
 }
 
