@@ -112,6 +112,21 @@ console.log(sortChars(["v","z","a",2,"w","t","r","R",3],true))
 // output 1: ["z", "w", "v", "t", "r", "R", "a", 2, 3]
 // output 2: ["a", "R", "r", "t", "v", "w", "z", 2, 3]
 ```
+## sortByKeys(keysArray,rawArray,ascending)
+#### Sort the <_rawArray_> by custom keys where: <_keysArray_>
+#### NOTE: I did not change <_rawArray_>.Reassign for change.
+### Example:
+```js
+var keyArr = ["new","basic","member","regular","leader"]
+var rawArr = ["member","basic","new","kjfghjkgl","regular","leader","regular","asdasd","leader","member"]
+
+console.log(sortByKeys(keyArr,rawArr,true))
+console.log(sortByKeys(keyArr,rawArr,false))
+
+// outputs:
+// ["new", "basic", "member", "member", "regular", "regular", "leader", "leader", "kjfghjkgl", "asdasd"]
+// ["leader", "leader", "regular", "regular", "member", "member", "basic", "new", "kjfghjkgl", "asdasd"]
+```
 
 
 

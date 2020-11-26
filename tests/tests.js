@@ -8,8 +8,9 @@ import {
     range,
     choice,
     zip,
-    sortChars
-} from "../functions";
+    sortChars,
+    sortByKeys
+} from "../functions"
 
 var a = ["one","two","three","four","five"]
 
@@ -28,6 +29,12 @@ console.log(range(5,11))
 console.log(sortChars(["v","z","a",2,"w","t","r","R",3],false))
 
 console.log(sortChars(["v","z","a",2,"w","t","r","R",3],true))
+
+var keyArr = ["new","basic","member","regular","leader"]
+var rawArr = ["member","basic","new","kjfghjkgl","regular","leader","regular","asdasd","leader","member"]
+
+console.log(sortByKeys(keyArr,rawArr,true))
+console.log(sortByKeys(keyArr,rawArr,false))
 
 var o = {
     "name":"abdullah",

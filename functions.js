@@ -69,6 +69,22 @@ function sortChars(arr,asc){
     return result
 }
 
+function sortByKeys(keys,arr,asc){
+    var res = []
+    var arr = [...arr]
+    keys.forEach((item,index) => {
+        arr.forEach((item2,index2) => {
+            if(item === item2){
+                res.push(item2)
+                arr.splice(index2,1)
+            }
+        })
+    })
+    res = asc ? res : res.reverse()
+    res.push(...arr)
+    return res
+}
+
 export {
     findKeyByValue,
     sleep,
@@ -79,6 +95,7 @@ export {
     range,
     choice,
     zip,
-    sortChars
+    sortChars,
+    sortByKeys
 }
 
