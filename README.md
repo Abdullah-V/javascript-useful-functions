@@ -47,7 +47,7 @@ console.log(objSize(obj))
 // output: 3
 ```
 ## _randomNumber(a,b)_
-#### generate random number between <_a_> and <_b_>
+#### generate random number between <_a_> and <_b_>.
 ### Example:
 ```js
 console.log(randomNumber(4,9))
