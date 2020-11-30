@@ -69,6 +69,7 @@ console.log(shuffle(a))
 ```js
 var a = ["one","two","three","four","five"]
 var b = [1,2,3,4,5]
+console.log(zip(a, b))
 
 // output: [["one",1],["two",2],["three",3],["four",4],["five",5]]
 ``` 
