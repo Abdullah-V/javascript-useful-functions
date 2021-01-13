@@ -1,0 +1,12 @@
+{
+  "name": "useful-js-functions",
+  "version": "1.0.0",
+  "description": "Useful built in javascript functions where not included in the javascript standard",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests.js"
+  },
+  "keywords": ["function","utility","useful"],
+  "author": "Abdullah Veliyev",
+  "license": "MIT"
+}
