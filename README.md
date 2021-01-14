@@ -13,7 +13,7 @@
 
 ```js
 const useful = require("useful-js-functions")
-const { range,randomNumber,sleep,genCh } = require('./index')
+const { range,randomNumber,sleep,genCh } = require('useful-js-functions')
 ```
 
 
