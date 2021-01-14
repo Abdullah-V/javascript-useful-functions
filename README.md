@@ -11,6 +11,12 @@
 
 # Usage
 
+```js
+const useful = require("useful-js-functions")
+const { range,randomNumber,sleep,genCh } = require('./index')
+```
+
+
 ## _findKeyByValue(value)_
 #### Find object keys by value.
 ### Example:
@@ -83,7 +89,7 @@ console.log(arr1.zip(arr2))
 ``` 
 ## _genCh(start,end)_
 #### Generate chars between <_start_> char and <_end_> char.
-#### NOTE: Must same case(e.g.:(d,m) or (D,M)) 
+#### NOTE: Must same case(e.g.:(j,s) or (J,S)) 
 ### Example:
 ```js
 console.log(genCh("j","s"))
