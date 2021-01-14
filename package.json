@@ -1,6 +1,6 @@
 {
   "name": "useful-js-functions",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Useful built in javascript functions where not included in the javascript standard",
   "main": "index.js",
   "scripts": {

@@ -10,9 +10,15 @@ Object.prototype.findKeyByValue = function(value){
 
 
 String.prototype.replaceAt = function(index,str){
-    var result = this.split("")
-    result[index] = str
-    return result.join("")
+    if(arguments.length === 2){
+        if((typeof index === 'number' && isFinite(index)) && (typeof str === 'string' || str instanceof String)){
+            var result = this.split("")
+            result[index] = str
+            return result.join("")   
+        }
+        throw new Error("Invalid parameter type(s)")
+    }
+    throw new Error("Must be 2 parameter")
 }
 
 
@@ -53,6 +59,9 @@ Array.prototype.shuffle = function(){
 
 
 Array.prototype.zip = function(arr){
+    if(!Array.isArray(arr)){
+        throw new Error("Parameter must be array")
+    }
     var res = []
     for(a = 0;a<this.length;a++){
         res.push([this[a],arr[a]])
@@ -71,6 +80,9 @@ Array.prototype.choice = function(){
 
 
 Array.prototype.sortChars = function(asc){
+    if(!(typeof asc === "boolean")){
+        throw new Error("Parameter must be boolean")
+    }
     var arr = this
     var keys = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz"
     keys = asc ? [...keys] : [...keys].reverse()
@@ -92,6 +104,9 @@ Array.prototype.sortChars = function(asc){
 
 
 Array.prototype.sortByKeys = function(keys,asc){
+    if(!(Array.isArray(keys)) || !(typeof asc === "boolean")){
+        throw new Error("Invalid parameter type(s)")
+    }
     var arr = this
     var res = []
     var arr = [...arr]
@@ -110,20 +125,45 @@ Array.prototype.sortByKeys = function(keys,asc){
 
 
 
+Array.prototype.count = function(el){
+    return this.filter(e => e === el).length
+}
+
+
+String.prototype.count = function(el){
+    return this.split("").filter(e => e === el).length
+}
+
+
 
 
 module.exports = {
     range(start,end){
-        return [...Array(end).keys()].slice(start)
+        if((typeof start === 'number' && isFinite(start)) && (typeof end === 'number' && isFinite(end))){
+            return [...Array(end).keys()].slice(start)
+        }
+        throw new Error("Invalid parameter type(s)")
     },
+
     genCh(start,end){
-        return String.fromCharCode(...[...Array(end.charCodeAt(0) - start.charCodeAt(0) + 1).keys()].map(i => i + start.charCodeAt(0)))
+        if((typeof start === 'string' || start instanceof String) && (typeof end === 'string' || end instanceof String)){
+            return String.fromCharCode(...[...Array(end.charCodeAt(0) - start.charCodeAt(0) + 1).keys()].map(i => i + start.charCodeAt(0)))
+        }
+        throw new Error("Invalid parameter type(s)")
     },
+
     randomNumber(min,max){
-        return Math.floor(Math.random() * (max - min + 1) + min);
+        if((typeof min === 'number' && isFinite(min)) && (typeof max === 'number' && isFinite(max))){
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        throw new Error("Invalid parameter type(s)")
     },
+
     sleep(ms){
-        return new Promise(resolve => setTimeout(resolve,ms))
+        if(typeof ms === 'number' && isFinite(ms)){
+            return new Promise(resolve => setTimeout(resolve,ms))
+        }
+        throw new Error("Invalid parameter type")
     }
 }
 

@@ -161,6 +161,38 @@ console.log([1,2,[3,4,5,[6,[7,8],9],10]].flat(Infinity))
 // output: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 ```
 
+
+
+
+
+
+
+
+
+## _count(item)_
+#### Count of <_item_> in array(or string)
+### Example:
+```js
+var rawArr = ["member","basic","new","kjfghjkgl","regular","leader","regular","asdasd","leader","member"]
+
+console.log("javascript".count("a"));
+console.log(rawArr.count("member"));
+
+// outputs:
+// 2
+// 2
+```
+
+
+
+
+
+
+
+
+
+
+
 # LICENSE
 ### MIT License
 
@@ -187,9 +219,9 @@ SOFTWARE.
 
 # Contact with me
 
-## Telegram: https://t.me/Abdullah_V_2005
+### Telegram: https://t.me/Abdullah_V_2005
 
-## Email: abdullahveliyev2005@gmail.com
+### Email: abdullahveliyev2005@gmail.com
 
 
 

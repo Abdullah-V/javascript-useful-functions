@@ -51,9 +51,13 @@ console.log(obj.objSize())
 
 console.log(randomNumber(4,9))
 
-async function sleepTest(){
-    await sleep(2000)
-    console.log("work after 2000ms sleep")
+console.log("javascript".count("a"));
+
+console.log(rawArr.count("member"));
+
+async function sleepTest(ms){
+    await sleep(ms)
+    console.log(`work after ${ms}ms sleep`)
 }
 
-sleepTest()
+sleepTest(1000)
